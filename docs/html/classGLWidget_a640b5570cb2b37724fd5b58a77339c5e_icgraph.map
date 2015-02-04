@@ -1,0 +1,10 @@
+<map id="GLWidget::paintGL" name="GLWidget::paintGL">
+<area shape="rect" id="node2" href="$classGLWidget.html#aa17c9adb76b61f1f0c4a285f538ce80d" title="GLWidget::deselectAll" alt="" coords="208,5,360,32"/>
+<area shape="rect" id="node3" href="$classGLWidget.html#abe918fd89a3f4c4f3d8864efee282610" title="GLWidget::selectAll" alt="" coords="215,56,353,83"/>
+<area shape="rect" id="node4" href="$classGLWidget.html#a7c2c4eee95553aad627843b865d3bc23" title="This will load a file fileName using QDataStream version (Qt 4.9). " alt="" coords="215,107,353,133"/>
+<area shape="rect" id="node5" href="$classGLWidget.html#aed44b9ce42449cf8f086a743bbbac7cd" title="An implementation of the undo function. " alt="" coords="226,157,342,184"/>
+<area shape="rect" id="node6" href="$classGLWidget.html#a5371a80ec723e710374f302611710e15" title="An implementation of redo. " alt="" coords="227,208,341,235"/>
+<area shape="rect" id="node7" href="$classGLWidget.html#ab144cc8064c1bbf6d0ef0646ca0bd06c" title="GLWidget::mousePressEvent" alt="" coords="187,259,381,285"/>
+<area shape="rect" id="node8" href="$classGLWidget.html#a9043bac13d6f0a5307ea5c7f9b3caa50" title="GLWidget::mouseMoveEvent" alt="" coords="187,309,381,336"/>
+<area shape="rect" id="node9" href="$classGLWidget.html#a43dfdc9164dfacb939a173e725651fa9" title="Called whenever a Key is pressed. " alt="" coords="195,360,373,387"/>
+</map>

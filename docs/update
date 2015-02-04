@@ -1,0 +1,3 @@
+#!/bin/bash
+
+doxygen ~/Documents/Code/Bixel/docs/Doxyfile 

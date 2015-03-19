@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QAction>
 
+/**
+ * @todo Figure out how to keep focus on glWidget. Maybe make al glWidget keyboard actions QActions in the menu?
+ */
 class BixelWindow : public QMainWindow {
     Q_OBJECT
     public:
@@ -35,10 +38,13 @@ class BixelWindow : public QMainWindow {
         BixelWindow(QWidget* parent = 0, Qt::WindowFlags flags = 0);
         ~BixelWindow();
 
+    public slots:
+        void open_slot(std::string fileName);
     private slots:
         void open_slot();
         void save_as_slot();
         void save_slot();
+        void export_image_slot();
         void stateChanged();
 
     signals:
@@ -47,7 +53,7 @@ class BixelWindow : public QMainWindow {
         void save_signal();
         void save_as_signal(const std::string& fileName);
         void open_signal(const std::string& fileName);
-        void export_image_signal();
+        void export_image_signal(const std::string& fileName);
         void preferences_signal();
         void undo_signal();
         void redo_signal();

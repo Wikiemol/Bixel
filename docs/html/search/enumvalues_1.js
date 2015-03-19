@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['eraser',['ERASER',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0a36a243e579dcf431ca1bf5306f9b3459',1,'GLWidget']]],
-  ['eyedrop',['EYEDROP',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0ab9c3b71d6caf455913325367c4d00862',1,'GLWidget']]]
+  ['eraser',['ERASER',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550aa34e8c8568bfffe1626cdb65c2cd2890',1,'BixelGrid']]],
+  ['eyedrop',['EYEDROP',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550a4c524a2f23b6f5d7ab3beae0664979b9',1,'BixelGrid']]]
 ];

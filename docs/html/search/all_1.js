@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['calculatebixelwidth',['calculateBixelWidth',['../classGLWidget.html#a9e1d6025155e0e95331f3dd8a8a4db62',1,'GLWidget']]],
+  ['calculatebixelwidth',['calculateBixelWidth',['../classBixelGrid.html#afe77db7049d223a8acd959d4446c14d6',1,'BixelGrid']]],
   ['canvaswidget',['CanvasWidget',['../classCanvasWidget.html',1,'']]],
-  ['changetool',['changeTool',['../classCanvasWidget.html#a10d481976a36a4e489f42d2b5dfa4662',1,'CanvasWidget::changeTool()'],['../classGLWidget.html#ab712fb8b0f65e689a21749062bd2f8d7',1,'GLWidget::changeTool()']]],
-  ['colormatrix',['colorMatrix',['../classGLWidget.html#aab1b8762be4b33d384e3689427c2addc',1,'GLWidget']]],
-  ['colormatrixindex',['colorMatrixIndex',['../classGLWidget.html#a6d19cf2624d93499c40163ddb4091783',1,'GLWidget']]],
-  ['convertpositiontobixelindex',['convertPositionToBixelIndex',['../classGLWidget.html#a7555011afa685031ca05eaebe7d673cc',1,'GLWidget']]],
-  ['current_20tasks',['Current tasks',['../task.html',1,'']]]
+  ['changetool',['changeTool',['../classBixelGrid.html#a25699eeea595d189da034973b46334bb',1,'BixelGrid::changeTool()'],['../classCanvasWidget.html#a10d481976a36a4e489f42d2b5dfa4662',1,'CanvasWidget::changeTool()']]],
+  ['colormatrix',['colorMatrix',['../classBixelGrid.html#af49dd9a67d90c0734ed08bd2376066ad',1,'BixelGrid']]],
+  ['colormatrixindex',['colorMatrixIndex',['../classBixelGrid.html#ac3221aef8da0d7a2f3ede83471466076',1,'BixelGrid']]],
+  ['convertpositiontobixelindex',['convertPositionToBixelIndex',['../classBixelGrid.html#a5fad6aaebbe1f4d9796f129eef84282c',1,'BixelGrid']]]
 ];

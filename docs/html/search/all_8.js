@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keypressevent',['keyPressEvent',['../classGLWidget.html#a43dfdc9164dfacb939a173e725651fa9',1,'GLWidget']]],
-  ['keyreleaseevent',['keyReleaseEvent',['../classGLWidget.html#a3fff7f887bf2ab1df58c870fb6146f31',1,'GLWidget']]]
+  ['keypressevent',['keyPressEvent',['../classBixelGrid.html#acc492318b516a008c9bdbab7f5f82b80',1,'BixelGrid']]],
+  ['keyreleaseevent',['keyReleaseEvent',['../classBixelGrid.html#aa5e9669334966836b60bf7a4ee78e392',1,'BixelGrid']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openfile',['openFile',['../classGLWidget.html#a7c2c4eee95553aad627843b865d3bc23',1,'GLWidget']]]
+  ['normalizecoordinates',['normalizeCoordinates',['../classBixelGrid.html#ad62f1c6ddb009592303afbf429d5a049',1,'BixelGrid']]]
 ];

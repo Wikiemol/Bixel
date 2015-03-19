@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['redo',['redo',['../classGLWidget.html#a5371a80ec723e710374f302611710e15',1,'GLWidget']]],
-  ['resizegl',['resizeGL',['../classGLWidget.html#ac0d2a8ecf60907a81c0d73475d851025',1,'GLWidget']]]
+  ['redo',['redo',['../classBixelGrid.html#a7808bd593d111d31ef5e22bd7058ce8d',1,'BixelGrid']]],
+  ['resizegl',['resizeGL',['../classBixelGrid.html#ab1c0c7c12283b1a37ec9c5f0bdb6dbb1',1,'BixelGrid']]]
 ];

@@ -5,146 +5,159 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 BIXELWINDOW_HPP	bixelwindow.hpp	2;"	d
-BRUSH	glwidget.hpp	/^                        BRUSH, \/\/\/<  Used to Color Bixels$/;"	e	enum:GLWidget::DrawTool
+BRUSH	bixelgrid.hpp	/^                        BRUSH, \/\/\/<  Used to Color Bixels$/;"	e	enum:BixelGrid::DrawTool
+BixelGrid	bixelgrid.cpp	/^BixelGrid::BixelGrid(QWidget* parent) : QGLWidget(QGLFormat(), parent), $/;"	f	class:BixelGrid
+BixelGrid	bixelgrid.hpp	/^class BixelGrid : public QGLWidget {$/;"	c
 BixelWindow	bixelwindow.cpp	/^BixelWindow::BixelWindow(QWidget* parent, Qt::WindowFlags flags) : QMainWindow(parent, flags), m_fileName(""), m_saveUpToDate(true) {$/;"	f	class:BixelWindow
 BixelWindow	bixelwindow.hpp	/^class BixelWindow : public QMainWindow {$/;"	c
 CANVASWIDGET_HPP	canvaswidget.hpp	2;"	d
 CanvasWidget	canvaswidget.cpp	/^CanvasWidget::CanvasWidget(QWidget* parent) : QWidget(parent), zoom(1.0), clickPosition(0, 0), m_fileName("") {$/;"	f	class:CanvasWidget
 CanvasWidget	canvaswidget.hpp	/^class CanvasWidget : public QWidget {$/;"	c
-ColorMatrixIndex	glwidget.hpp	/^    typedef int ColorMatrixIndex;$/;"	t	class:GLWidget
-DrawTool	glwidget.hpp	/^        enum DrawTool { MOUSE,  \/\/\/< Used to select Bixels$/;"	g	class:GLWidget
-ERASER	glwidget.hpp	/^                        ERASER, \/\/\/< Used to set Bixel color to (0, 0, 0, 0)$/;"	e	enum:GLWidget::DrawTool
-EYEDROP	glwidget.hpp	/^                        EYEDROP, \/\/\/< The Eyedrop Tool$/;"	e	enum:GLWidget::DrawTool
-GLWIDGET_HPP	glwidget.hpp	2;"	d
-GLWidget	glwidget.cpp	/^GLWidget::GLWidget(QWidget* parent) : QGLWidget(QGLFormat(), parent), $/;"	f	class:GLWidget
-GLWidget	glwidget.hpp	/^class GLWidget : public QGLWidget {$/;"	c
-HAND	glwidget.hpp	/^                        HAND, \/\/\/< The Hand Tool$/;"	e	enum:GLWidget::DrawTool
-HistoryState	glwidget.hpp	/^            HistoryState(GLWidget* widgetToSave) {$/;"	f	struct:GLWidget::HistoryState
-HistoryState	glwidget.hpp	/^        struct HistoryState {$/;"	s	class:GLWidget
-MOUSE	glwidget.hpp	/^        enum DrawTool { MOUSE,  \/\/\/< Used to select Bixels$/;"	e	enum:GLWidget::DrawTool
+ColorMatrixIndex	bixelgrid.hpp	/^    typedef int ColorMatrixIndex;$/;"	t	class:BixelGrid
+DrawTool	bixelgrid.hpp	/^        enum DrawTool { MOUSE,  \/\/\/< Used to select Bixels$/;"	g	class:BixelGrid
+ERASER	bixelgrid.hpp	/^                        ERASER, \/\/\/< Used to set Bixel color to (0, 0, 0, 0)$/;"	e	enum:BixelGrid::DrawTool
+EYEDROP	bixelgrid.hpp	/^                        EYEDROP, \/\/\/< The Eyedrop Tool$/;"	e	enum:BixelGrid::DrawTool
+GLWIDGET_HPP	bixelgrid.hpp	2;"	d
+HAND	bixelgrid.hpp	/^                        HAND, \/\/\/< The Hand Tool$/;"	e	enum:BixelGrid::DrawTool
+HistoryState	bixelgrid.hpp	/^            HistoryState(BixelGrid* widgetToSave) {$/;"	f	struct:BixelGrid::HistoryState
+HistoryState	bixelgrid.hpp	/^        struct HistoryState {$/;"	s	class:BixelGrid
+MOUSE	bixelgrid.hpp	/^        enum DrawTool { MOUSE,  \/\/\/< Used to select Bixels$/;"	e	enum:BixelGrid::DrawTool
 OLILOGGER_HPP	logger.hpp	2;"	d
+PAINTBUCKET	bixelgrid.hpp	/^                        PAINTBUCKET, \/\/\/< @todo implement this$/;"	e	enum:BixelGrid::DrawTool
 SWATCH_HPP	swatch.hpp	2;"	d
 Swatch	swatch.cpp	/^Swatch::Swatch(QWidget* parent) : QToolButton(parent) {$/;"	f	class:Swatch
 Swatch	swatch.hpp	/^class Swatch : public QToolButton {$/;"	c
 VEC2_HPP	vec2.hpp	2;"	d
-ZOOM	glwidget.hpp	/^                        ZOOM \/\/\/< The Zoom Tool$/;"	e	enum:GLWidget::DrawTool
-calculateBixelWidth	glwidget.cpp	/^float GLWidget::calculateBixelWidth() {$/;"	f	class:GLWidget
+ZOOM	bixelgrid.hpp	/^                        ZOOM \/\/\/< The Zoom Tool$/;"	e	enum:BixelGrid::DrawTool
+calculateBixelWidth	bixelgrid.cpp	/^float BixelGrid::calculateBixelWidth() {$/;"	f	class:BixelGrid
+changeTool	bixelgrid.cpp	/^void BixelGrid::changeTool(BixelGrid::DrawTool tool) {$/;"	f	class:BixelGrid
 changeTool	canvaswidget.cpp	/^void CanvasWidget::changeTool(int tool) {$/;"	f	class:CanvasWidget
-changeTool	glwidget.cpp	/^void GLWidget::changeTool(GLWidget::DrawTool tool) {$/;"	f	class:GLWidget
 clickPosition	canvaswidget.hpp	/^        vec2 clickPosition;$/;"	m	class:CanvasWidget
 color	swatch.cpp	/^QColor Swatch::color() {$/;"	f	class:Swatch
-colorMatrix	glwidget.cpp	/^std::vector<QColor> GLWidget::colorMatrix() {$/;"	f	class:GLWidget
-colorMatrixIndex	glwidget.cpp	/^GLWidget::ColorMatrixIndex GLWidget::colorMatrixIndex(int i, int j) const {$/;"	f	class:GLWidget
-colorMatrix_state	glwidget.hpp	/^            std::vector<QColor> colorMatrix_state;$/;"	m	struct:GLWidget::HistoryState
+colorMatrix	bixelgrid.cpp	/^std::vector<QColor> BixelGrid::colorMatrix() {$/;"	f	class:BixelGrid
+colorMatrixIndex	bixelgrid.cpp	/^BixelGrid::ColorMatrixIndex BixelGrid::colorMatrixIndex(int i, int j) const {$/;"	f	class:BixelGrid
+colorMatrix_state	bixelgrid.hpp	/^            std::vector<QColor> colorMatrix_state;$/;"	m	struct:BixelGrid::HistoryState
 colorPicker	canvaswidget.hpp	/^        QColorDialog colorPicker; $/;"	m	class:CanvasWidget
-convertPositionToBixelIndex	glwidget.cpp	/^std::vector<int> GLWidget::convertPositionToBixelIndex(int x, int y) const {$/;"	f	class:GLWidget
+convertPositionToBixelIndex	bixelgrid.cpp	/^std::vector<int> BixelGrid::convertPositionToBixelIndex(int x, int y) const {$/;"	f	class:BixelGrid
 copy	bixelwindow.hpp	/^        QAction* copy;$/;"	m	class:BixelWindow
 currentColor	canvaswidget.hpp	/^        QColor currentColor;$/;"	m	class:CanvasWidget
-currentTool	canvaswidget.hpp	/^        GLWidget::DrawTool currentTool;$/;"	m	class:CanvasWidget
+currentTool	canvaswidget.hpp	/^        BixelGrid::DrawTool currentTool;$/;"	m	class:CanvasWidget
 custom_zoom	bixelwindow.hpp	/^        QAction* custom_zoom;$/;"	m	class:BixelWindow
 cut	bixelwindow.hpp	/^        QAction* cut;$/;"	m	class:BixelWindow
-decreaseDimension	glwidget.cpp	/^void GLWidget::decreaseDimension() {$/;"	f	class:GLWidget
+decreaseDimension	bixelgrid.cpp	/^void BixelGrid::decreaseDimension() {$/;"	f	class:BixelGrid
+deselectAll	bixelgrid.cpp	/^void BixelGrid::deselectAll() {$/;"	f	class:BixelGrid
 deselectAll	canvaswidget.cpp	/^void CanvasWidget::deselectAll() {$/;"	f	class:CanvasWidget
-deselectAll	glwidget.cpp	/^void GLWidget::deselectAll() {$/;"	f	class:GLWidget
-deselectBixelAt	glwidget.cpp	/^void GLWidget::deselectBixelAt(int i, int j) {$/;"	f	class:GLWidget
+deselectBixelAt	bixelgrid.cpp	/^void BixelGrid::deselectBixelAt(int i, int j) {$/;"	f	class:BixelGrid
 deselect_all	bixelwindow.hpp	/^        QAction* deselect_all;$/;"	m	class:BixelWindow
-dimension	glwidget.cpp	/^int GLWidget::dimension() {$/;"	f	class:GLWidget
-dimension_state	glwidget.hpp	/^            int dimension_state;$/;"	m	struct:GLWidget::HistoryState
-drawSquare	glwidget.cpp	/^void GLWidget::drawSquare(QColor color,$/;"	f	class:GLWidget
-drawingColor	glwidget.cpp	/^QColor GLWidget::drawingColor() {$/;"	f	class:GLWidget
+dimension	bixelgrid.cpp	/^int BixelGrid::dimension() {$/;"	f	class:BixelGrid
+dimension_state	bixelgrid.hpp	/^            int dimension_state;$/;"	m	struct:BixelGrid::HistoryState
+drawSquare	bixelgrid.cpp	/^void BixelGrid::drawSquare(QColor color,$/;"	f	class:BixelGrid
+drawingColor	bixelgrid.cpp	/^QColor BixelGrid::drawingColor() {$/;"	f	class:BixelGrid
 eventFilter	canvaswidget.cpp	/^bool CanvasWidget::eventFilter(QObject*, QEvent* event) {$/;"	f	class:CanvasWidget
+exportPNG	bixelgrid.cpp	/^bool BixelGrid::exportPNG(const std::string& fileName) {$/;"	f	class:BixelGrid
+exportPNG	canvaswidget.cpp	/^void CanvasWidget::exportPNG(const std::string& fileName) {$/;"	f	class:CanvasWidget
 export_image	bixelwindow.hpp	/^        QAction* export_image;$/;"	m	class:BixelWindow
-fillSelected	glwidget.cpp	/^void GLWidget::fillSelected() {$/;"	f	class:GLWidget
-getColorAt	glwidget.cpp	/^QColor GLWidget::getColorAt(int i, int j) {$/;"	f	class:GLWidget
+export_image_slot	bixelwindow.cpp	/^void BixelWindow::export_image_slot() {$/;"	f	class:BixelWindow
+fillSelected	bixelgrid.cpp	/^void BixelGrid::fillSelected() {$/;"	f	class:BixelGrid
+getColorAt	bixelgrid.cpp	/^QColor BixelGrid::getColorAt(int i, int j) {$/;"	f	class:BixelGrid
 getCurrentTool	canvaswidget.cpp	/^int CanvasWidget::getCurrentTool() {$/;"	f	class:CanvasWidget
-gridHeight	glwidget.cpp	/^int GLWidget::gridHeight() {$/;"	f	class:GLWidget
-gridHeight_state	glwidget.hpp	/^            int gridHeight_state;$/;"	m	struct:GLWidget::HistoryState
-gridWidth	glwidget.cpp	/^int GLWidget::gridWidth() {$/;"	f	class:GLWidget
-gridWidth_state	glwidget.hpp	/^            int gridWidth_state;$/;"	m	struct:GLWidget::HistoryState
-increaseDimension	glwidget.cpp	/^void GLWidget::increaseDimension() {$/;"	f	class:GLWidget
-initializeGL	glwidget.cpp	/^void GLWidget::initializeGL() {$/;"	f	class:GLWidget
-keyPressEvent	glwidget.cpp	/^void GLWidget::keyPressEvent(QKeyEvent* event) {$/;"	f	class:GLWidget
-keyReleaseEvent	glwidget.cpp	/^void GLWidget::keyReleaseEvent(QKeyEvent*) {$/;"	f	class:GLWidget
-loadHistoryState	glwidget.cpp	/^bool GLWidget::loadHistoryState(int stateIndex) {$/;"	f	class:GLWidget
+gridHeight	bixelgrid.cpp	/^int BixelGrid::gridHeight() {$/;"	f	class:BixelGrid
+gridHeight_state	bixelgrid.hpp	/^            int gridHeight_state;$/;"	m	struct:BixelGrid::HistoryState
+gridWidth	bixelgrid.cpp	/^int BixelGrid::gridWidth() {$/;"	f	class:BixelGrid
+gridWidth_state	bixelgrid.hpp	/^            int gridWidth_state;$/;"	m	struct:BixelGrid::HistoryState
+increaseDimension	bixelgrid.cpp	/^void BixelGrid::increaseDimension() {$/;"	f	class:BixelGrid
+initializeGL	bixelgrid.cpp	/^void BixelGrid::initializeGL() {$/;"	f	class:BixelGrid
+keyPressEvent	bixelgrid.cpp	/^void BixelGrid::keyPressEvent(QKeyEvent* event) {$/;"	f	class:BixelGrid
+keyReleaseEvent	bixelgrid.cpp	/^void BixelGrid::keyReleaseEvent(QKeyEvent*) {$/;"	f	class:BixelGrid
+loadHistoryState	bixelgrid.cpp	/^bool BixelGrid::loadHistoryState(int stateIndex) {$/;"	f	class:BixelGrid
 log	logger.cpp	/^    void olilog::log(std::string $/;"	f	class:olilog
-m_backgroundColor	glwidget.hpp	/^        QColor m_backgroundColor;$/;"	m	class:GLWidget
-m_bixelWidth	glwidget.hpp	/^        float m_bixelWidth;$/;"	m	class:GLWidget
-m_clickIndex	glwidget.hpp	/^        std::vector<int> m_clickIndex;$/;"	m	class:GLWidget
+m_backgroundColor	bixelgrid.hpp	/^        QColor m_backgroundColor;$/;"	m	class:BixelGrid
+m_bixelWidth	bixelgrid.hpp	/^        float m_bixelWidth;$/;"	m	class:BixelGrid
+m_clickIndex	bixelgrid.hpp	/^        std::vector<int> m_clickIndex;$/;"	m	class:BixelGrid
 m_color	swatch.hpp	/^        QColor m_color;$/;"	m	class:Swatch
-m_colorMatrix	glwidget.hpp	/^        std::vector<QColor> m_colorMatrix; $/;"	m	class:GLWidget
-m_currentMouseIndex	glwidget.hpp	/^        std::vector<int> m_currentMouseIndex;$/;"	m	class:GLWidget
-m_currentSize	glwidget.hpp	/^        int m_currentSize;$/;"	m	class:GLWidget
-m_currentState	glwidget.hpp	/^        int m_currentState;$/;"	m	class:GLWidget
-m_currentTool	glwidget.hpp	/^        DrawTool m_currentTool;$/;"	m	class:GLWidget
-m_dimension	glwidget.hpp	/^        int m_dimension;$/;"	m	class:GLWidget
-m_drawingColor	glwidget.hpp	/^        QColor m_drawingColor;$/;"	m	class:GLWidget
+m_colorMatrix	bixelgrid.hpp	/^        std::vector<QColor> m_colorMatrix; $/;"	m	class:BixelGrid
+m_currentMouseIndex	bixelgrid.hpp	/^        std::vector<int> m_currentMouseIndex;$/;"	m	class:BixelGrid
+m_currentSize	bixelgrid.hpp	/^        int m_currentSize;$/;"	m	class:BixelGrid
+m_currentState	bixelgrid.hpp	/^        int m_currentState;$/;"	m	class:BixelGrid
+m_currentTool	bixelgrid.hpp	/^        DrawTool m_currentTool;$/;"	m	class:BixelGrid
+m_dimension	bixelgrid.hpp	/^        int m_dimension;$/;"	m	class:BixelGrid
+m_drawingColor	bixelgrid.hpp	/^        QColor m_drawingColor;$/;"	m	class:BixelGrid
 m_fileName	bixelwindow.hpp	/^        std::string m_fileName;$/;"	m	class:BixelWindow
 m_fileName	canvaswidget.hpp	/^        std::string m_fileName;$/;"	m	class:CanvasWidget
-m_gridHeight	glwidget.hpp	/^        int m_gridHeight;$/;"	m	class:GLWidget
-m_gridWidth	glwidget.hpp	/^        int m_gridWidth;$/;"	m	class:GLWidget
-m_history	glwidget.hpp	/^        std::deque<HistoryState> m_history;$/;"	m	class:GLWidget
-m_lineProgram	glwidget.hpp	/^        QGLShaderProgram m_lineProgram;$/;"	m	class:GLWidget
+m_gridHeight	bixelgrid.hpp	/^        int m_gridHeight;$/;"	m	class:BixelGrid
+m_gridWidth	bixelgrid.hpp	/^        int m_gridWidth;$/;"	m	class:BixelGrid
+m_history	bixelgrid.hpp	/^        std::deque<HistoryState> m_history;$/;"	m	class:BixelGrid
+m_isInitialized	bixelgrid.hpp	/^        bool m_isInitialized;$/;"	m	class:BixelGrid
+m_markedBixels	bixelgrid.hpp	/^        std::set<int> m_markedBixels;$/;"	m	class:BixelGrid
+m_openWhenInitialized	bixelgrid.hpp	/^        std::string m_openWhenInitialized;$/;"	m	class:BixelGrid
 m_saveUpToDate	bixelwindow.hpp	/^        bool m_saveUpToDate;$/;"	m	class:BixelWindow
-m_selectedBixels	glwidget.hpp	/^        std::set<int> m_selectedBixels;$/;"	m	class:GLWidget
-m_squareProgram	glwidget.hpp	/^        QGLShaderProgram m_squareProgram;$/;"	m	class:GLWidget
+m_selectedBixels	bixelgrid.hpp	/^        std::set<int> m_selectedBixels;$/;"	m	class:BixelGrid
+m_squareProgram	bixelgrid.hpp	/^        QGLShaderProgram m_squareProgram;$/;"	m	class:BixelGrid
 main	main.cpp	/^int main(int args, char *argv[]) {$/;"	f
 mainWindow	canvaswidget.hpp	/^        QWidget* mainWindow;$/;"	m	class:CanvasWidget
+markAll	bixelgrid.cpp	/^void BixelGrid::markAll() {$/;"	f	class:BixelGrid
+markBixelAt	bixelgrid.cpp	/^void BixelGrid::markBixelAt(ColorMatrixIndex i) {$/;"	f	class:BixelGrid
+markBixelAt	bixelgrid.cpp	/^void BixelGrid::markBixelAt(int i, int j) {$/;"	f	class:BixelGrid
+markSelected	bixelgrid.cpp	/^void BixelGrid::markSelected() {$/;"	f	class:BixelGrid
+mouseMoveEvent	bixelgrid.cpp	/^void BixelGrid::mouseMoveEvent(QMouseEvent* event) {$/;"	f	class:BixelGrid
 mouseMoveEvent	canvaswidget.cpp	/^void CanvasWidget::mouseMoveEvent(QMouseEvent* event) {$/;"	f	class:CanvasWidget
-mouseMoveEvent	glwidget.cpp	/^void GLWidget::mouseMoveEvent(QMouseEvent* event) {$/;"	f	class:GLWidget
+mousePressEvent	bixelgrid.cpp	/^void BixelGrid::mousePressEvent(QMouseEvent* event) {$/;"	f	class:BixelGrid
 mousePressEvent	canvaswidget.cpp	/^void CanvasWidget::mousePressEvent(QMouseEvent* event) {$/;"	f	class:CanvasWidget
-mousePressEvent	glwidget.cpp	/^void GLWidget::mousePressEvent(QMouseEvent* event) {$/;"	f	class:GLWidget
+mouseReleaseEvent	bixelgrid.cpp	/^void BixelGrid::mouseReleaseEvent(QMouseEvent* ) {$/;"	f	class:BixelGrid
 mouseReleaseEvent	canvaswidget.cpp	/^void CanvasWidget::mouseReleaseEvent(QMouseEvent* ) {}$/;"	f	class:CanvasWidget
-mouseReleaseEvent	glwidget.cpp	/^void GLWidget::mouseReleaseEvent(QMouseEvent* ) {$/;"	f	class:GLWidget
 mouseReleaseEvent	swatch.cpp	/^void Swatch::mouseReleaseEvent(QMouseEvent*) {$/;"	f	class:Swatch
 new_file	bixelwindow.hpp	/^        QAction* new_file;$/;"	m	class:BixelWindow
-normalizeCoordinates	glwidget.cpp	/^vec2 GLWidget::normalizeCoordinates(vec2 coord) const {$/;"	f	class:GLWidget
+normalizeCoordinates	bixelgrid.cpp	/^vec2 BixelGrid::normalizeCoordinates(vec2 coord) const {$/;"	f	class:BixelGrid
 olilog	logger.hpp	/^namespace olilog {$/;"	n
 open	bixelwindow.hpp	/^        QAction* open;$/;"	m	class:BixelWindow
-open	canvaswidget.cpp	/^void CanvasWidget::open(std::string fileName) {$/;"	f	class:CanvasWidget
+open	canvaswidget.cpp	/^bool CanvasWidget::open(std::string fileName) {$/;"	f	class:CanvasWidget
 openColorPicker	canvaswidget.cpp	/^void CanvasWidget::openColorPicker() {$/;"	f	class:CanvasWidget
-openFile	glwidget.cpp	/^bool GLWidget::openFile(const std::string& fileName) {$/;"	f	class:GLWidget
-openGLWidget	canvaswidget.hpp	/^        GLWidget* openGLWidget;$/;"	m	class:CanvasWidget
+openFile	bixelgrid.cpp	/^bool BixelGrid::openFile(const std::string& fileName) {$/;"	f	class:BixelGrid
+openGLWidget	canvaswidget.hpp	/^        BixelGrid* openGLWidget;$/;"	m	class:CanvasWidget
 open_slot	bixelwindow.cpp	/^void BixelWindow::open_slot() {$/;"	f	class:BixelWindow
+open_slot	bixelwindow.cpp	/^void BixelWindow::open_slot(std::string fileName) {$/;"	f	class:BixelWindow
 operator +	vec2.cpp	/^vec2 vec2::operator+(const vec2 &b) const {$/;"	f	class:vec2
 operator -	vec2.cpp	/^vec2 vec2::operator-(const vec2 &b) const {$/;"	f	class:vec2
-operator ==	glwidget.hpp	/^            bool operator==(HistoryState b) {$/;"	f	struct:GLWidget::HistoryState
+operator ==	bixelgrid.hpp	/^            bool operator==(HistoryState b) {$/;"	f	struct:BixelGrid::HistoryState
 operator ==	vec2.cpp	/^bool vec2::operator==(const vec2 &b) const {$/;"	f	class:vec2
 paintEvent	canvaswidget.cpp	/^void CanvasWidget::paintEvent(QPaintEvent*) {$/;"	f	class:CanvasWidget
-paintGL	glwidget.cpp	/^void GLWidget::paintGL() {$/;"	f	class:GLWidget
+paintGL	bixelgrid.cpp	/^void BixelGrid::paintGL() {$/;"	f	class:BixelGrid
 paste	bixelwindow.hpp	/^        QAction* paste;$/;"	m	class:BixelWindow
 preferences	bixelwindow.hpp	/^        QAction* preferences;$/;"	m	class:BixelWindow
+redo	bixelgrid.cpp	/^void BixelGrid::redo() {$/;"	f	class:BixelGrid
 redo	bixelwindow.hpp	/^        QAction* redo;$/;"	m	class:BixelWindow
 redo	canvaswidget.cpp	/^void CanvasWidget::redo() {$/;"	f	class:CanvasWidget
-redo	glwidget.cpp	/^void GLWidget::redo() {$/;"	f	class:GLWidget
 reset_view	bixelwindow.hpp	/^        QAction* reset_view;$/;"	m	class:BixelWindow
 resizeEvent	canvaswidget.cpp	/^void CanvasWidget::resizeEvent(QResizeEvent*) {$/;"	f	class:CanvasWidget
-resizeGL	glwidget.cpp	/^void GLWidget::resizeGL(int width, int height) {$/;"	f	class:GLWidget
+resizeGL	bixelgrid.cpp	/^void BixelGrid::resizeGL(int width, int height) {$/;"	f	class:BixelGrid
 save	bixelwindow.hpp	/^        QAction* save;$/;"	m	class:BixelWindow
 saveAs	canvaswidget.cpp	/^void CanvasWidget::saveAs(std::string fileName) {$/;"	f	class:CanvasWidget
-saveFile	glwidget.cpp	/^bool GLWidget::saveFile(const std::string& fileName) {$/;"	f	class:GLWidget
-saveHistoryState	glwidget.cpp	/^void GLWidget::saveHistoryState() {$/;"	f	class:GLWidget
+saveFile	bixelgrid.cpp	/^bool BixelGrid::saveFile(const std::string& fileName) {$/;"	f	class:BixelGrid
+saveHistoryState	bixelgrid.cpp	/^void BixelGrid::saveHistoryState() {$/;"	f	class:BixelGrid
 save_as	bixelwindow.hpp	/^        QAction* save_as;$/;"	m	class:BixelWindow
 save_as_slot	bixelwindow.cpp	/^void BixelWindow::save_as_slot() {$/;"	f	class:BixelWindow
 save_slot	bixelwindow.cpp	/^void BixelWindow::save_slot() {$/;"	f	class:BixelWindow
+selectAll	bixelgrid.cpp	/^void BixelGrid::selectAll() {$/;"	f	class:BixelGrid
 selectAll	canvaswidget.cpp	/^void CanvasWidget::selectAll() {$/;"	f	class:CanvasWidget
-selectAll	glwidget.cpp	/^void GLWidget::selectAll() {$/;"	f	class:GLWidget
-selectBixelAt	glwidget.cpp	/^void GLWidget::selectBixelAt(int i, int j) {$/;"	f	class:GLWidget
-selectRectangle	glwidget.cpp	/^void GLWidget::selectRectangle(const std::vector<int>& p1,$/;"	f	class:GLWidget
+selectBixelAt	bixelgrid.cpp	/^void BixelGrid::selectBixelAt(ColorMatrixIndex i) {$/;"	f	class:BixelGrid
+selectBixelAt	bixelgrid.cpp	/^void BixelGrid::selectBixelAt(int i, int j) {$/;"	f	class:BixelGrid
+selectRectangle	bixelgrid.cpp	/^void BixelGrid::selectRectangle(const std::vector<ColorMatrixIndex>& point1,$/;"	f	class:BixelGrid
 select_all	bixelwindow.hpp	/^        QAction* select_all;$/;"	m	class:BixelWindow
-selectedBixels	glwidget.cpp	/^std::set<GLWidget::ColorMatrixIndex> GLWidget::selectedBixels() {$/;"	f	class:GLWidget
-selectedBixels_state	glwidget.hpp	/^            std::set<int> selectedBixels_state;$/;"	m	struct:GLWidget::HistoryState
+selectedBixels	bixelgrid.cpp	/^std::set<BixelGrid::ColorMatrixIndex> BixelGrid::selectedBixels() {$/;"	f	class:BixelGrid
+selectedBixels_state	bixelgrid.hpp	/^            std::set<int> selectedBixels_state;$/;"	m	struct:BixelGrid::HistoryState
 set	vec2.cpp	/^void vec2::set(double x, double y) {$/;"	f	class:vec2
 setColor	swatch.cpp	/^void Swatch::setColor(QColor color) {$/;"	f	class:Swatch
 setColor	swatch.cpp	/^void Swatch::setColor(QRgb color) {$/;"	f	class:Swatch
 setColor	swatch.cpp	/^void Swatch::setColor(int r, int g, int b, int a) {$/;"	f	class:Swatch
-setColorAt	glwidget.cpp	/^void GLWidget::setColorAt(int i, int j, QColor color) {$/;"	f	class:GLWidget
+setColorAt	bixelgrid.cpp	/^void BixelGrid::setColorAt(ColorMatrixIndex i, QColor color) {$/;"	f	class:BixelGrid
+setColorAt	bixelgrid.cpp	/^void BixelGrid::setColorAt(int i, int j, QColor color) {$/;"	f	class:BixelGrid
 setCurrentColor	canvaswidget.cpp	/^void CanvasWidget::setCurrentColor(const QColor& color) {$/;"	f	class:CanvasWidget
-setDrawingColor	glwidget.cpp	/^void GLWidget::setDrawingColor(const QColor& color) {$/;"	f	class:GLWidget
+setDrawingColor	bixelgrid.cpp	/^void BixelGrid::setDrawingColor(const QColor& color) {$/;"	f	class:BixelGrid
 stateChanged	bixelwindow.cpp	/^void BixelWindow::stateChanged() {$/;"	f	class:BixelWindow
-tool	glwidget.cpp	/^GLWidget::DrawTool GLWidget::tool() {$/;"	f	class:GLWidget
+tool	bixelgrid.cpp	/^BixelGrid::DrawTool BixelGrid::tool() {$/;"	f	class:BixelGrid
+undo	bixelgrid.cpp	/^void BixelGrid::undo() {$/;"	f	class:BixelGrid
 undo	bixelwindow.hpp	/^        QAction* undo;$/;"	m	class:BixelWindow
 undo	canvaswidget.cpp	/^void CanvasWidget::undo() {$/;"	f	class:CanvasWidget
-undo	glwidget.cpp	/^void GLWidget::undo() {$/;"	f	class:GLWidget
 updateSize	canvaswidget.cpp	/^void CanvasWidget::updateSize() {$/;"	f	class:CanvasWidget
 vec2	vec2.cpp	/^vec2::vec2(double x, double y) {$/;"	f	class:vec2
 vec2	vec2.hpp	/^class vec2 {$/;"	c
@@ -155,7 +168,7 @@ zoomIn	canvaswidget.cpp	/^void CanvasWidget::zoomIn() {$/;"	f	class:CanvasWidget
 zoomOut	canvaswidget.cpp	/^void CanvasWidget::zoomOut() {$/;"	f	class:CanvasWidget
 zoom_in	bixelwindow.hpp	/^        QAction* zoom_in;$/;"	m	class:BixelWindow
 zoom_out	bixelwindow.hpp	/^        QAction* zoom_out;$/;"	m	class:BixelWindow
+~BixelGrid	bixelgrid.cpp	/^BixelGrid::~BixelGrid() {}$/;"	f	class:BixelGrid
 ~BixelWindow	bixelwindow.cpp	/^BixelWindow::~BixelWindow() {$/;"	f	class:BixelWindow
 ~CanvasWidget	canvaswidget.cpp	/^CanvasWidget::~CanvasWidget() {$/;"	f	class:CanvasWidget
-~GLWidget	glwidget.cpp	/^GLWidget::~GLWidget() {}$/;"	f	class:GLWidget
 ~Swatch	swatch.cpp	/^Swatch::~Swatch() {}$/;"	f	class:Swatch

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['undo',['undo',['../classGLWidget.html#aed44b9ce42449cf8f086a743bbbac7cd',1,'GLWidget']]]
+  ['tool',['tool',['../classBixelGrid.html#a7ed6c84211d98fbd425651f062b46264',1,'BixelGrid']]]
 ];

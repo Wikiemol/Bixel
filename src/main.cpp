@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "glwidget.hpp"
+#include "bixelgrid.hpp"
 #include "canvaswidget.hpp"
 #include "vec2.hpp"
 #include "bixelwindow.hpp"
@@ -52,7 +52,7 @@ int main(int args, char *argv[]) {
                 mouse->click();
                 toolBar->addWidget(mouse);
                 tools->addButton(mouse);
-                tools->setId(mouse, GLWidget::MOUSE);
+                tools->setId(mouse, BixelGrid::MOUSE);
 
                 QPushButton* paintBrush = new QPushButton();
                 paintBrush->setShortcut(QKeySequence("a"));
@@ -61,7 +61,7 @@ int main(int args, char *argv[]) {
                 paintBrush->setFixedHeight(30);
                 toolBar->addWidget(paintBrush);
                 tools->addButton(paintBrush);
-                tools->setId(paintBrush, GLWidget::BRUSH);
+                tools->setId(paintBrush, BixelGrid::BRUSH);
 
                 QPushButton* eraser = new QPushButton();
                 eraser->setShortcut(QKeySequence("z"));
@@ -70,7 +70,7 @@ int main(int args, char *argv[]) {
                 eraser->setFixedHeight(30);
                 toolBar->addWidget(eraser);
                 tools->addButton(eraser);
-                tools->setId(eraser, GLWidget::ERASER);
+                tools->setId(eraser, BixelGrid::ERASER);
 
                 QPushButton* eyeDrop = new QPushButton();
                 //eyeDrop->setShortcut(QKeySequence("z"));
@@ -79,7 +79,7 @@ int main(int args, char *argv[]) {
                 eyeDrop->setFixedHeight(30);
                 toolBar->addWidget(eyeDrop);
                 tools->addButton(eyeDrop);
-                tools->setId(eyeDrop, GLWidget::EYEDROP);
+                tools->setId(eyeDrop, BixelGrid::EYEDROP);
 
                 QPushButton* hand = new QPushButton();
                 hand->setShortcut(QKeySequence("h"));
@@ -88,7 +88,7 @@ int main(int args, char *argv[]) {
                 hand->setFixedHeight(30);
                 toolBar->addWidget(hand);
                 tools->addButton(hand);
-                tools->setId(hand, GLWidget::HAND);
+                tools->setId(hand, BixelGrid::HAND);
 
                 QPushButton* zoom = new QPushButton();
                 //zoom->setShortcut(QKeySequence(""));
@@ -97,7 +97,7 @@ int main(int args, char *argv[]) {
                 zoom->setFixedHeight(30);
                 toolBar->addWidget(zoom);
                 tools->addButton(zoom);
-                tools->setId(zoom, GLWidget::ZOOM);
+                tools->setId(zoom, BixelGrid::ZOOM);
 
                 toolBar->addSeparator();
 
@@ -146,6 +146,9 @@ int main(int args, char *argv[]) {
             QObject::connect(swatch_5, SIGNAL(swatchPicked(QColor)), canvas, SLOT(setCurrentColor(QColor)));
 
             canvas->setCurrentColor(QColor(128, 200, 128));
+            if(args >= 2) {
+                mainWindow->open_slot(argv[1]);
+            }
         centralWidget->setLayout(boxLayout);
 
     mainWindow->showMaximized();

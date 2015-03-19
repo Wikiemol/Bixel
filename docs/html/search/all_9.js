@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadhistorystate',['loadHistoryState',['../classGLWidget.html#acb2ac0440f3e004a77c31f8b035fb8a4',1,'GLWidget']]]
+  ['loadhistorystate',['loadHistoryState',['../classBixelGrid.html#a9a860c60ad1a54d5ec3f632ce92f1097',1,'BixelGrid']]]
 ];

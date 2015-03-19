@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['brush',['BRUSH',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0a13dba4ab40790d00786f83a8af372a37',1,'GLWidget']]]
+  ['brush',['BRUSH',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550a8891dccca812923f395b939c12195d5e',1,'BixelGrid']]]
 ];

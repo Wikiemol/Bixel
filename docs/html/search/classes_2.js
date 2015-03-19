@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['glwidget',['GLWidget',['../classGLWidget.html',1,'']]]
+  ['historystate',['HistoryState',['../structBixelGrid_1_1HistoryState.html',1,'BixelGrid']]]
 ];

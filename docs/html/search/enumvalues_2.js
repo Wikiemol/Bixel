@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hand',['HAND',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0ab807fc933b2f87fde055dd12b61a9ec2',1,'GLWidget']]]
+  ['hand',['HAND',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550a067029768316780852997759e147a774',1,'BixelGrid']]]
 ];

@@ -39,7 +39,7 @@ struct \hyperlink{structGLWidget_1_1HistoryState}{History\-State}
 enum \hyperlink{classGLWidget_a9fba3eba78950865febd4547be0641d0}{Draw\-Tool} \{ \\*
 \hyperlink{classGLWidget_a9fba3eba78950865febd4547be0641d0a53197083abb268d80465c7af0071bfe7}{M\-O\-U\-S\-E}, 
 \hyperlink{classGLWidget_a9fba3eba78950865febd4547be0641d0a13dba4ab40790d00786f83a8af372a37}{B\-R\-U\-S\-H}, 
-{\bfseries P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T}, 
+\hyperlink{classGLWidget_a9fba3eba78950865febd4547be0641d0aa9321e588f178276ed181cc2ffa44dbc}{P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T}, 
 \hyperlink{classGLWidget_a9fba3eba78950865febd4547be0641d0a36a243e579dcf431ca1bf5306f9b3459}{E\-R\-A\-S\-E\-R}, 
 \\*
 \hyperlink{classGLWidget_a9fba3eba78950865febd4547be0641d0ab9c3b71d6caf455913325367c4d00862}{E\-Y\-E\-D\-R\-O\-P}, 
@@ -64,6 +64,9 @@ bool \hyperlink{classGLWidget_aebdd7462523ecff734ac224031ec9e0b}{save\-File} (co
 \begin{DoxyCompactList}\small\item\em This will save a file {\ttfamily file\-Name} using Q\-Data\-Stream version (Qt 4.\-9). \end{DoxyCompactList}\item 
 bool \hyperlink{classGLWidget_a7c2c4eee95553aad627843b865d3bc23}{open\-File} (const std\-::string \&file\-Name)
 \begin{DoxyCompactList}\small\item\em This will load a file {\ttfamily file\-Name} using Q\-Data\-Stream version (Qt 4.\-9). \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_ac84f7199c7f5b1f862055ee0d0967926}{bool {\bfseries export\-P\-N\-G} (const std\-::string \&file\-Name)}\label{classGLWidget_ac84f7199c7f5b1f862055ee0d0967926}
+
+\item 
 void \hyperlink{classGLWidget_a603764586aa51ed3fbdd06ac9c658e6b}{increase\-Dimension} ()
 \begin{DoxyCompactList}\small\item\em This will multiply the \hyperlink{classGLWidget_a0ecdf8ea93e62ab9d294714e59dafd64}{dimension} of the widget by 2. \end{DoxyCompactList}\item 
 void \hyperlink{classGLWidget_a34c77d5e886569ec84123bb0da5a0751}{decrease\-Dimension} ()
@@ -76,6 +79,15 @@ void \hyperlink{classGLWidget_a5371a80ec723e710374f302611710e15}{redo} ()
 {\em These are all methods that add or remove Bixels from \hyperlink{classGLWidget_ab07a9ee710f42da54d0158cbdedf3674}{selected\-Bixels}. }\begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classGLWidget_a1acd74645ffbe6bc071365c2bbd176ba}{fill\-Selected} ()
+\item 
+void \hyperlink{classGLWidget_aaf41952d7453b05e153821344b2421cf}{mark\-Bixel\-At} (int i, int j)
+\item 
+void \hyperlink{classGLWidget_a5cde6b23531556b170d5104275afcf7c}{mark\-Bixel\-At} (Color\-Matrix\-Index i)
+\item 
+void \hyperlink{classGLWidget_a196f90c25a7b35bd16715d74744297d3}{mark\-Selected} ()
+\item 
+\hypertarget{classGLWidget_a95d64c7108683e66fdc4825404ec3803}{void {\bfseries mark\-All} ()}\label{classGLWidget_a95d64c7108683e66fdc4825404ec3803}
+
 \item 
 void \hyperlink{classGLWidget_ac41fdd4181036c79f4bdf688045155b3}{select\-Bixel\-At} (int i, int j)
 \item 
@@ -170,13 +182,25 @@ float \hyperlink{classGLWidget_a9e1d6025155e0e95331f3dd8a8a4db62}{calculate\-Bix
 A Widget for rendering and drawing Bixels. 
 
 \begin{DoxyRefDesc}{What I am currently doing}
-\item[\hyperlink{task__task000001}{What I am currently doing}]Adding a m\-\_\-marked\-Bixels vector that will contain every Bixel that has been changed since the last call to \hyperlink{classGLWidget_a640b5570cb2b37724fd5b58a77339c5e}{paint\-G\-L}.
+\item[\hyperlink{task__task000002}{What I am currently doing}]Adding a m\-\_\-marked\-Bixels vector that will contain every Bixel that has been changed since the last call to \hyperlink{classGLWidget_a640b5570cb2b37724fd5b58a77339c5e}{paint\-G\-L}.
 \begin{DoxyItemize}
-\item Create the member variable $\ast$$\ast$$\ast$
-\item Create a mark\-Bixel(int i, int j) method
-\item Go through every mutator of \hyperlink{classGLWidget_aab1b8762be4b33d384e3689427c2addc}{color\-Matrix} and add a call to mark\-Bixel(int i, int j)
-\item Update paint\-G\-L to draw only the bixels that have been marked. 
+\item Create the member variable $\ast$$\ast$$\ast$\-Done$\ast$$\ast$$\ast$
+\item Create a mark\-Bixel(int i, int j) method $\ast$$\ast$$\ast$\-Done$\ast$$\ast$$\ast$
+\item Go through every mutator of \hyperlink{classGLWidget_aab1b8762be4b33d384e3689427c2addc}{color\-Matrix} and add a call to mark\-Bixel(int i, int j) $\ast$$\ast$$\ast$\-Done$\ast$$\ast$$\ast$
+\item Update paint\-G\-L to draw only the bixels that have been marked.
 \end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{What I am currently doing}
+\item[\hyperlink{task__task000003}{What I am currently doing}]Provide Export to png support
+\begin{DoxyItemize}
+\item Create png save to file method
+\item Connect it to file $>$ export menu Q\-Action
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{What I am currently doing}
+\item[\hyperlink{task__task000004}{What I am currently doing}]Update whatever needs to be updated to Qt 5.\-4 \end{DoxyRefDesc}
 The \hyperlink{classGLWidget}{G\-L\-Widget} is used as the canvas for the user to draw and edit .bixl files using various tools. The Widget is defined by a grid of width \hyperlink{classGLWidget_a272046b9cb9f26f5b382f9a121672570}{grid\-Width} and height \hyperlink{classGLWidget_a419c32eef067d7157b00904dd52bdb8b}{grid\-Height}.
 
 \begin{DoxySeeAlso}{See Also}
@@ -185,7 +209,7 @@ The \hyperlink{classGLWidget}{G\-L\-Widget} is used as the canvas for the user t
 \begin{DoxyRefDesc}{High Priority Todo}
 \item[\hyperlink{todo1__todo1000001}{High Priority Todo}]Make sure delicate members like m\-\_\-color\-Matrix and m\-\_\-selected\-Bixels are only accessed through accessor and mutator methods. \end{DoxyRefDesc}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000010}{Todo}]Rename to Bixel\-Grid or something \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000010}{Todo}]Rename this class to Bixel\-Grid or something \end{DoxyRefDesc}
 
 
 \subsection{Member Enumeration Documentation}
@@ -214,7 +238,11 @@ Flesh out tools enum documentation \end{DoxyRefDesc}
 \hypertarget{classGLWidget_a9fba3eba78950865febd4547be0641d0a53197083abb268d80465c7af0071bfe7}{M\-O\-U\-S\-E}\label{classGLWidget_a9fba3eba78950865febd4547be0641d0a53197083abb268d80465c7af0071bfe7}
 }]Used to select Bixels. \index{B\-R\-U\-S\-H@{B\-R\-U\-S\-H}!G\-L\-Widget@{G\-L\-Widget}}\index{G\-L\-Widget@{G\-L\-Widget}!B\-R\-U\-S\-H@{B\-R\-U\-S\-H}}\item[{\em 
 \hypertarget{classGLWidget_a9fba3eba78950865febd4547be0641d0a13dba4ab40790d00786f83a8af372a37}{B\-R\-U\-S\-H}\label{classGLWidget_a9fba3eba78950865febd4547be0641d0a13dba4ab40790d00786f83a8af372a37}
-}]Used to Color Bixels. \index{E\-R\-A\-S\-E\-R@{E\-R\-A\-S\-E\-R}!G\-L\-Widget@{G\-L\-Widget}}\index{G\-L\-Widget@{G\-L\-Widget}!E\-R\-A\-S\-E\-R@{E\-R\-A\-S\-E\-R}}\item[{\em 
+}]Used to Color Bixels. \index{P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T@{P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T}!G\-L\-Widget@{G\-L\-Widget}}\index{G\-L\-Widget@{G\-L\-Widget}!P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T@{P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T}}\item[{\em 
+\hypertarget{classGLWidget_a9fba3eba78950865febd4547be0641d0aa9321e588f178276ed181cc2ffa44dbc}{P\-A\-I\-N\-T\-B\-U\-C\-K\-E\-T}\label{classGLWidget_a9fba3eba78950865febd4547be0641d0aa9321e588f178276ed181cc2ffa44dbc}
+}]\begin{DoxyRefDesc}{What I am currently doing}
+\item[\hyperlink{task__task000005}{What I am currently doing}]implement this \end{DoxyRefDesc}
+\index{E\-R\-A\-S\-E\-R@{E\-R\-A\-S\-E\-R}!G\-L\-Widget@{G\-L\-Widget}}\index{G\-L\-Widget@{G\-L\-Widget}!E\-R\-A\-S\-E\-R@{E\-R\-A\-S\-E\-R}}\item[{\em 
 \hypertarget{classGLWidget_a9fba3eba78950865febd4547be0641d0a36a243e579dcf431ca1bf5306f9b3459}{E\-R\-A\-S\-E\-R}\label{classGLWidget_a9fba3eba78950865febd4547be0641d0a36a243e579dcf431ca1bf5306f9b3459}
 }]Used to set Bixel color to (0, 0, 0, 0) \index{E\-Y\-E\-D\-R\-O\-P@{E\-Y\-E\-D\-R\-O\-P}!G\-L\-Widget@{G\-L\-Widget}}\index{G\-L\-Widget@{G\-L\-Widget}!E\-Y\-E\-D\-R\-O\-P@{E\-Y\-E\-D\-R\-O\-P}}\item[{\em 
 \hypertarget{classGLWidget_a9fba3eba78950865febd4547be0641d0ab9c3b71d6caf455913325367c4d00862}{E\-Y\-E\-D\-R\-O\-P}\label{classGLWidget_a9fba3eba78950865febd4547be0641d0ab9c3b71d6caf455913325367c4d00862}
@@ -477,7 +505,29 @@ Loads state specified by {\ttfamily state\-Index} in \#history.
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
 \item[\hyperlink{todo__todo000008}{Todo}]Create history access. \end{DoxyRefDesc}
-\hypertarget{classGLWidget_a9043bac13d6f0a5307ea5c7f9b3caa50}{\index{G\-L\-Widget@{G\-L\-Widget}!mouse\-Move\-Event@{mouse\-Move\-Event}}
+\hypertarget{classGLWidget_aaf41952d7453b05e153821344b2421cf}{\index{G\-L\-Widget@{G\-L\-Widget}!mark\-Bixel\-At@{mark\-Bixel\-At}}
+\index{mark\-Bixel\-At@{mark\-Bixel\-At}!GLWidget@{G\-L\-Widget}}
+\subsubsection[{mark\-Bixel\-At}]{\setlength{\rightskip}{0pt plus 5cm}void G\-L\-Widget\-::mark\-Bixel\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{classGLWidget_aaf41952d7453b05e153821344b2421cf}
+Mark a bixel as being changed. \hypertarget{classGLWidget_a5cde6b23531556b170d5104275afcf7c}{\index{G\-L\-Widget@{G\-L\-Widget}!mark\-Bixel\-At@{mark\-Bixel\-At}}
+\index{mark\-Bixel\-At@{mark\-Bixel\-At}!GLWidget@{G\-L\-Widget}}
+\subsubsection[{mark\-Bixel\-At}]{\setlength{\rightskip}{0pt plus 5cm}void G\-L\-Widget\-::mark\-Bixel\-At (
+\begin{DoxyParamCaption}
+\item[{Color\-Matrix\-Index}]{i}
+\end{DoxyParamCaption}
+)}}\label{classGLWidget_a5cde6b23531556b170d5104275afcf7c}
+Mark a bixel as being changed. \hypertarget{classGLWidget_a196f90c25a7b35bd16715d74744297d3}{\index{G\-L\-Widget@{G\-L\-Widget}!mark\-Selected@{mark\-Selected}}
+\index{mark\-Selected@{mark\-Selected}!GLWidget@{G\-L\-Widget}}
+\subsubsection[{mark\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}void G\-L\-Widget\-::mark\-Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGLWidget_a196f90c25a7b35bd16715d74744297d3}
+Mark all selected Bixels as being changed. \hypertarget{classGLWidget_a9043bac13d6f0a5307ea5c7f9b3caa50}{\index{G\-L\-Widget@{G\-L\-Widget}!mouse\-Move\-Event@{mouse\-Move\-Event}}
 \index{mouse\-Move\-Event@{mouse\-Move\-Event}!GLWidget@{G\-L\-Widget}}
 \subsubsection[{mouse\-Move\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void G\-L\-Widget\-::mouse\-Move\-Event (
 \begin{DoxyParamCaption}

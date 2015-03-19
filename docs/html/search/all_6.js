@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hand',['HAND',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0ab807fc933b2f87fde055dd12b61a9ec2',1,'GLWidget']]],
-  ['historystate',['HistoryState',['../structGLWidget_1_1HistoryState.html#ae299cd96c1489e61d82519333fc19294',1,'GLWidget::HistoryState']]],
-  ['historystate',['HistoryState',['../structGLWidget_1_1HistoryState.html',1,'GLWidget']]]
+  ['hand',['HAND',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550a067029768316780852997759e147a774',1,'BixelGrid']]],
+  ['historystate',['HistoryState',['../structBixelGrid_1_1HistoryState.html#aa9f45a02c898296f4fc6c17700fb7bfe',1,'BixelGrid::HistoryState']]],
+  ['historystate',['HistoryState',['../structBixelGrid_1_1HistoryState.html',1,'BixelGrid']]]
 ];

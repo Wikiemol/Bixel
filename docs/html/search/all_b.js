@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizecoordinates',['normalizeCoordinates',['../classGLWidget.html#ab464e7edbe7729a853d7ccb510d6ef73',1,'GLWidget']]]
+  ['normalizecoordinates',['normalizeCoordinates',['../classBixelGrid.html#ad62f1c6ddb009592303afbf429d5a049',1,'BixelGrid']]]
 ];

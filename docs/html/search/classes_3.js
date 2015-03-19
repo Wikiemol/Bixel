@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['historystate',['HistoryState',['../structGLWidget_1_1HistoryState.html',1,'GLWidget']]]
+  ['swatch',['Swatch',['../classSwatch.html',1,'']]]
 ];

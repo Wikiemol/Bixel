@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['decreasedimension',['decreaseDimension',['../classGLWidget.html#a34c77d5e886569ec84123bb0da5a0751',1,'GLWidget']]],
-  ['deselectall',['deselectAll',['../classGLWidget.html#aa17c9adb76b61f1f0c4a285f538ce80d',1,'GLWidget']]],
-  ['deselectbixelat',['deselectBixelAt',['../classGLWidget.html#a9ecf9af9846dacfa9cbf17cecc478145',1,'GLWidget']]],
-  ['dimension',['dimension',['../classGLWidget.html#a0ecdf8ea93e62ab9d294714e59dafd64',1,'GLWidget']]],
-  ['drawingcolor',['drawingColor',['../classGLWidget.html#a8ea9c1e6b1013897e22dc7121f377113',1,'GLWidget']]],
-  ['drawsquare',['drawSquare',['../classGLWidget.html#a6e0dab354b3abec59774c29f82346ebe',1,'GLWidget']]],
-  ['drawtool',['DrawTool',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0',1,'GLWidget']]]
+  ['decreasedimension',['decreaseDimension',['../classBixelGrid.html#a3980df6f8699db73452b0893190877ce',1,'BixelGrid']]],
+  ['deselectall',['deselectAll',['../classBixelGrid.html#a261787ffdae9bf06e83fd74d511b9db1',1,'BixelGrid']]],
+  ['deselectbixelat',['deselectBixelAt',['../classBixelGrid.html#a4f375e82f11ff6f5a8225fa61f84c1b0',1,'BixelGrid']]],
+  ['dimension',['dimension',['../classBixelGrid.html#aac761dbec07e93c105dd7332e982698c',1,'BixelGrid']]],
+  ['drawingcolor',['drawingColor',['../classBixelGrid.html#a714e782dde93d2f7bb123def46437c3f',1,'BixelGrid']]],
+  ['drawsquare',['drawSquare',['../classBixelGrid.html#af489f3437620f81cf3170ac6e7ce0a46',1,'BixelGrid']]],
+  ['drawtool',['DrawTool',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550',1,'BixelGrid']]]
 ];

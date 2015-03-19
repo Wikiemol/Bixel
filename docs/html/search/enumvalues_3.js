@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mouse',['MOUSE',['../classGLWidget.html#a9fba3eba78950865febd4547be0641d0a53197083abb268d80465c7af0071bfe7',1,'GLWidget']]]
+  ['mouse',['MOUSE',['../classBixelGrid.html#a2f45709d9159599eb3af5ceed54fc550a0e1fb6017d55da5a5a6b1af4339fd3d5',1,'BixelGrid']]]
 ];

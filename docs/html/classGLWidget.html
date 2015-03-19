@@ -122,7 +122,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:a9fba3eba78950865febd4547be0641d0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#a9fba3eba78950865febd4547be0641d0">DrawTool</a> { <br/>
 &#160;&#160;<a class="el" href="classGLWidget.html#a9fba3eba78950865febd4547be0641d0a53197083abb268d80465c7af0071bfe7">MOUSE</a>, 
 <a class="el" href="classGLWidget.html#a9fba3eba78950865febd4547be0641d0a13dba4ab40790d00786f83a8af372a37">BRUSH</a>, 
-<b>PAINTBUCKET</b>, 
+<a class="el" href="classGLWidget.html#a9fba3eba78950865febd4547be0641d0aa9321e588f178276ed181cc2ffa44dbc">PAINTBUCKET</a>, 
 <a class="el" href="classGLWidget.html#a9fba3eba78950865febd4547be0641d0a36a243e579dcf431ca1bf5306f9b3459">ERASER</a>, 
 <br/>
 &#160;&#160;<a class="el" href="classGLWidget.html#a9fba3eba78950865febd4547be0641d0ab9c3b71d6caf455913325367c4d00862">EYEDROP</a>, 
@@ -151,6 +151,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c2c4eee95553aad627843b865d3bc23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#a7c2c4eee95553aad627843b865d3bc23">openFile</a> (const std::string &amp;fileName)</td></tr>
 <tr class="memdesc:a7c2c4eee95553aad627843b865d3bc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load a file <code>fileName</code> using QDataStream version (Qt 4.9).  <a href="#a7c2c4eee95553aad627843b865d3bc23">More...</a><br/></td></tr>
 <tr class="separator:a7c2c4eee95553aad627843b865d3bc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84f7199c7f5b1f862055ee0d0967926"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac84f7199c7f5b1f862055ee0d0967926"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exportPNG</b> (const std::string &amp;fileName)</td></tr>
+<tr class="separator:ac84f7199c7f5b1f862055ee0d0967926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a603764586aa51ed3fbdd06ac9c658e6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#a603764586aa51ed3fbdd06ac9c658e6b">increaseDimension</a> ()</td></tr>
 <tr class="memdesc:a603764586aa51ed3fbdd06ac9c658e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This will multiply the <a class="el" href="classGLWidget.html#a0ecdf8ea93e62ab9d294714e59dafd64" title="The dimension of the GLWidget is the smallest of gridWidth and gridHeight. ">dimension</a> of the widget by 2.  <a href="#a603764586aa51ed3fbdd06ac9c658e6b">More...</a><br/></td></tr>
 <tr class="separator:a603764586aa51ed3fbdd06ac9c658e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +170,15 @@ Public Member Functions</h2></td></tr>
 </div></td></tr>
 <tr class="memitem:a1acd74645ffbe6bc071365c2bbd176ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#a1acd74645ffbe6bc071365c2bbd176ba">fillSelected</a> ()</td></tr>
 <tr class="separator:a1acd74645ffbe6bc071365c2bbd176ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf41952d7453b05e153821344b2421cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#aaf41952d7453b05e153821344b2421cf">markBixelAt</a> (int i, int j)</td></tr>
+<tr class="separator:aaf41952d7453b05e153821344b2421cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cde6b23531556b170d5104275afcf7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#a5cde6b23531556b170d5104275afcf7c">markBixelAt</a> (ColorMatrixIndex i)</td></tr>
+<tr class="separator:a5cde6b23531556b170d5104275afcf7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196f90c25a7b35bd16715d74744297d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#a196f90c25a7b35bd16715d74744297d3">markSelected</a> ()</td></tr>
+<tr class="separator:a196f90c25a7b35bd16715d74744297d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d64c7108683e66fdc4825404ec3803"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95d64c7108683e66fdc4825404ec3803"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>markAll</b> ()</td></tr>
+<tr class="separator:a95d64c7108683e66fdc4825404ec3803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41fdd4181036c79f4bdf688045155b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLWidget.html#ac41fdd4181036c79f4bdf688045155b3">selectBixelAt</a> (int i, int j)</td></tr>
 <tr class="separator:ac41fdd4181036c79f4bdf688045155b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75bca3161b8929b5190fa066cc14cc21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75bca3161b8929b5190fa066cc14cc21"></a>
@@ -254,17 +266,23 @@ Private Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Widget for rendering and drawing Bixels. </p>
-<dl class="task"><dt><b><a class="el" href="task.html#_task000001">What I am currently doing:</a></b></dt><dd>Adding a m_markedBixels vector that will contain every Bixel that has been changed since the last call to <a class="el" href="classGLWidget.html#a640b5570cb2b37724fd5b58a77339c5e">paintGL</a>.<ul>
-<li>Create the member variable ***</li>
-<li>Create a markBixel(int i, int j) method</li>
-<li>Go through every mutator of <a class="el" href="classGLWidget.html#aab1b8762be4b33d384e3689427c2addc">colorMatrix</a> and add a call to markBixel(int i, int j)</li>
-<li>Update paintGL to draw only the bixels that have been marked. </li>
+<dl class="task"><dt><b><a class="el" href="task.html#_task000002">What I am currently doing:</a></b></dt><dd>Adding a m_markedBixels vector that will contain every Bixel that has been changed since the last call to <a class="el" href="classGLWidget.html#a640b5570cb2b37724fd5b58a77339c5e">paintGL</a>.<ul>
+<li>Create the member variable ***Done***</li>
+<li>Create a markBixel(int i, int j) method ***Done***</li>
+<li>Go through every mutator of <a class="el" href="classGLWidget.html#aab1b8762be4b33d384e3689427c2addc">colorMatrix</a> and add a call to markBixel(int i, int j) ***Done***</li>
+<li>Update paintGL to draw only the bixels that have been marked.</li>
 </ul>
 </dd></dl>
+<dl class="task"><dt><b><a class="el" href="task.html#_task000003">What I am currently doing:</a></b></dt><dd>Provide Export to png support<ul>
+<li>Create png save to file method</li>
+<li>Connect it to file &gt; export menu QAction</li>
+</ul>
+</dd></dl>
+<dl class="task"><dt><b><a class="el" href="task.html#_task000004">What I am currently doing:</a></b></dt><dd>Update whatever needs to be updated to Qt 5.4 </dd></dl>
 <p>The <a class="el" href="classGLWidget.html" title="A Widget for rendering and drawing Bixels. ">GLWidget</a> is used as the canvas for the user to draw and edit .bixl files using various tools. The Widget is defined by a grid of width <a class="el" href="classGLWidget.html#a272046b9cb9f26f5b382f9a121672570">gridWidth</a> and height <a class="el" href="classGLWidget.html#a419c32eef067d7157b00904dd52bdb8b">gridHeight</a>.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classCanvasWidget.html">CanvasWidget</a> </dd></dl>
 <dl class="todo1"><dt><b><a class="el" href="todo1.html#_todo1000001">High Priority Todo:</a></b></dt><dd>Make sure delicate members like m_colorMatrix and m_selectedBixels are only accessed through accessor and mutator methods. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Rename to BixelGrid or something </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Rename this class to BixelGrid or something </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a9fba3eba78950865febd4547be0641d0"></a>
 <div class="memitem">
@@ -291,6 +309,9 @@ GLWidget::changeTool(int) </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a9fba3eba78950865febd4547be0641d0a13dba4ab40790d00786f83a8af372a37"></a>BRUSH</em>&#160;</td><td class="fielddoc">
 <p>Used to Color Bixels. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9fba3eba78950865febd4547be0641d0aa9321e588f178276ed181cc2ffa44dbc"></a>PAINTBUCKET</em>&#160;</td><td class="fielddoc">
+<dl class="task"><dt><b><a class="el" href="task.html#_task000005">What I am currently doing:</a></b></dt><dd>implement this </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a9fba3eba78950865febd4547be0641d0a36a243e579dcf431ca1bf5306f9b3459"></a>ERASER</em>&#160;</td><td class="fielddoc">
 <p>Used to set Bixel color to (0, 0, 0, 0) </p>
@@ -824,6 +845,66 @@ GLWidget::mouseMoveEvent(QEvent*) </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="aaf41952d7453b05e153821344b2421cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLWidget::markBixelAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mark a bixel as being changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5cde6b23531556b170d5104275afcf7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLWidget::markBixelAt </td>
+          <td>(</td>
+          <td class="paramtype">ColorMatrixIndex&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mark a bixel as being changed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a196f90c25a7b35bd16715d74744297d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLWidget::markSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mark all selected Bixels as being changed. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9043bac13d6f0a5307ea5c7f9b3caa50"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1290,7 +1371,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:48:56 for Bixel by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 14 2015 13:35:10 for Bixel by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

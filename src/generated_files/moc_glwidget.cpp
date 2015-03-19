@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'glwidget.hpp'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,32 +12,33 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'glwidget.hpp' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.2.1. It"
+#error "This file was generated using the moc from 5.4.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_GLWidget_t {
+struct qt_meta_stringdata_BixelGrid_t {
     QByteArrayData data[3];
     char stringdata[24];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_GLWidget_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_BixelGrid_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_GLWidget_t qt_meta_stringdata_GLWidget = {
+static const qt_meta_stringdata_BixelGrid_t qt_meta_stringdata_BixelGrid = {
     {
-QT_MOC_LITERAL(0, 0, 8),
-QT_MOC_LITERAL(1, 9, 12),
-QT_MOC_LITERAL(2, 22, 0)
+QT_MOC_LITERAL(0, 0, 9), // "BixelGrid"
+QT_MOC_LITERAL(1, 10, 12), // "stateChanged"
+QT_MOC_LITERAL(2, 23, 0) // ""
+
     },
-    "GLWidget\0stateChanged\0\0"
+    "BixelGrid\0stateChanged\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_GLWidget[] = {
+static const uint qt_meta_data_BixelGrid[] = {
 
  // content:
        7,       // revision
@@ -51,7 +52,7 @@ static const uint qt_meta_data_GLWidget[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x06,
+       1,    0,   19,    2, 0x06 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -59,10 +60,10 @@ static const uint qt_meta_data_GLWidget[] = {
        0        // eod
 };
 
-void GLWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void BixelGrid::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        GLWidget *_t = static_cast<GLWidget *>(_o);
+        BixelGrid *_t = static_cast<BixelGrid *>(_o);
         switch (_id) {
         case 0: _t->stateChanged(); break;
         default: ;
@@ -71,8 +72,8 @@ void GLWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         int *result = reinterpret_cast<int *>(_a[0]);
         void **func = reinterpret_cast<void **>(_a[1]);
         {
-            typedef void (GLWidget::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&GLWidget::stateChanged)) {
+            typedef void (BixelGrid::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BixelGrid::stateChanged)) {
                 *result = 0;
             }
         }
@@ -80,26 +81,26 @@ void GLWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
     Q_UNUSED(_a);
 }
 
-const QMetaObject GLWidget::staticMetaObject = {
-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_GLWidget.data,
-      qt_meta_data_GLWidget,  qt_static_metacall, 0, 0}
+const QMetaObject BixelGrid::staticMetaObject = {
+    { &QGLWidget::staticMetaObject, qt_meta_stringdata_BixelGrid.data,
+      qt_meta_data_BixelGrid,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *GLWidget::metaObject() const
+const QMetaObject *BixelGrid::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *GLWidget::qt_metacast(const char *_clname)
+void *BixelGrid::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_GLWidget.stringdata))
-        return static_cast<void*>(const_cast< GLWidget*>(this));
+    if (!_clname) return Q_NULLPTR;
+    if (!strcmp(_clname, qt_meta_stringdata_BixelGrid.stringdata))
+        return static_cast<void*>(const_cast< BixelGrid*>(this));
     return QGLWidget::qt_metacast(_clname);
 }
 
-int GLWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int BixelGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QGLWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -117,8 +118,8 @@ int GLWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void GLWidget::stateChanged()
+void BixelGrid::stateChanged()
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, 0);
+    QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

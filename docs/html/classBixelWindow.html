@@ -83,6 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -93,6 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">BixelWindow Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="bixelwindow_8hpp_source.html">bixelwindow.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BixelWindow:</div>
 <div class="dyncontent">
@@ -104,6 +107,12 @@ Collaboration diagram for BixelWindow:</div>
 <div class="center"><img src="classBixelWindow__coll__graph.png" border="0" usemap="#BixelWindow_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a4cb74f4db84d75a09598acba37f97268"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cb74f4db84d75a09598acba37f97268"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>open_slot</b> (std::string fileName)</td></tr>
+<tr class="separator:a4cb74f4db84d75a09598acba37f97268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a0ca7305900c3368348c36dbd73a51af9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ca7305900c3368348c36dbd73a51af9"></a>
@@ -118,9 +127,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save_as_signal</b> (c
 <tr class="memitem:a1f5cdec267152e7c84fa3430c4cea442"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5cdec267152e7c84fa3430c4cea442"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>open_signal</b> (const std::string &amp;fileName)</td></tr>
 <tr class="separator:a1f5cdec267152e7c84fa3430c4cea442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2902048d0627c28fd38102434e6baa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2902048d0627c28fd38102434e6baa0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>export_image_signal</b> ()</td></tr>
-<tr class="separator:ac2902048d0627c28fd38102434e6baa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64703a78a6b4e436248dbed135fe5420"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64703a78a6b4e436248dbed135fe5420"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>export_image_signal</b> (const std::string &amp;fileName)</td></tr>
+<tr class="separator:a64703a78a6b4e436248dbed135fe5420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af52996e623d4b53b5dc905c931960dc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af52996e623d4b53b5dc905c931960dc1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>preferences_signal</b> ()</td></tr>
 <tr class="separator:af52996e623d4b53b5dc905c931960dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +238,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save_as_slot</b> ()</
 <tr class="memitem:aad55b56dde73817c87eba8eb2d3404ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad55b56dde73817c87eba8eb2d3404ed"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>save_slot</b> ()</td></tr>
 <tr class="separator:aad55b56dde73817c87eba8eb2d3404ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2213a43259661c1246c0b533da9a595"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2213a43259661c1246c0b533da9a595"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>export_image_slot</b> ()</td></tr>
+<tr class="separator:ab2213a43259661c1246c0b533da9a595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496f56dc0cc83b36263d67c827fa040e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a496f56dc0cc83b36263d67c827fa040e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>stateChanged</b> ()</td></tr>
 <tr class="separator:a496f56dc0cc83b36263d67c827fa040e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,14 +254,16 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_fileName</b>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_saveUpToDate</b></td></tr>
 <tr class="separator:aa8803890cb2c415870bd3d74834a266d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Figure out how to keep focus on glWidget. Maybe make al glWidget keyboard actions QActions in the menu? </dd></dl>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="bixelwindow_8hpp_source.html">bixelwindow.hpp</a></li>
 <li>src/bixelwindow.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:48:56 for Bixel by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 16 2015 16:31:26 for Bixel by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

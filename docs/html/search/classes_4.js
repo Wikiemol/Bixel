@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['swatch',['Swatch',['../classSwatch.html',1,'']]]
+  ['vec2',['vec2',['../classvec2.html',1,'']]]
 ];

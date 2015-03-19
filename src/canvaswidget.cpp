@@ -7,11 +7,11 @@
 
 //-Public-//
 CanvasWidget::CanvasWidget(QWidget* parent) : QWidget(parent), zoom(1.0), clickPosition(0, 0), m_fileName("") {
-    CanvasWidget::openGLWidget = new GLWidget(this); 
+    CanvasWidget::openGLWidget = new BixelGrid(this); 
     openGLWidget->installEventFilter(this);
     QObject::connect(&colorPicker, SIGNAL(currentColorChanged(QColor)), this, SLOT(setCurrentColor(QColor)));
     setCurrentColor(QColor(128, 200, 128));
-    changeTool(GLWidget::MOUSE);
+    changeTool(BixelGrid::MOUSE);
 
     mainWindow = window();
 
@@ -26,6 +26,7 @@ CanvasWidget::CanvasWidget(QWidget* parent) : QWidget(parent), zoom(1.0), clickP
     QObject::connect(mainWindow, SIGNAL(redo_signal()), this, SLOT(redo()));
     QObject::connect(mainWindow, SIGNAL(open_signal(std::string)), this, SLOT(open(std::string)));
     QObject::connect(mainWindow, SIGNAL(save_as_signal(std::string)), this, SLOT(saveAs(std::string)));
+    QObject::connect(mainWindow, SIGNAL(export_image_signal(std::string)), this, SLOT(exportPNG(std::string)));
 }
 
 CanvasWidget::~CanvasWidget() {
@@ -40,20 +41,20 @@ int CanvasWidget::getCurrentTool() {
 
 /**
  * Changes the current tool being used to update
- * the widget. This function calls GLWidget::changeTool(int)
- * on the underlying GLWidget.
+ * the widget. This function calls BixelGrid::changeTool(int)
+ * on the underlying BixelGrid.
  *
- * @param tool      A GLWidget::DrawTool enum
+ * @param tool      A BixelGrid::DrawTool enum
  *                  that represents the tool the
  *                  widget should use.
  *
  * @see CanvasWidget::mousePressEvent(QEvent*)
  * @see CanvasWidget::mouseMoveEvent(QEvent*)
- * @see GLWidget::changeTool(int)
+ * @see BixelGrid::changeTool(int)
  */
 
 void CanvasWidget::changeTool(int tool) {
-    currentTool = (GLWidget::DrawTool) tool;
+    currentTool = (BixelGrid::DrawTool) tool;
 
     openGLWidget->changeTool(currentTool);
 }
@@ -131,13 +132,17 @@ void CanvasWidget::redo() {
     openGLWidget->redo();
 }
 
-void CanvasWidget::open(std::string fileName) {
-    openGLWidget->openFile(fileName);
+bool CanvasWidget::open(std::string fileName) {
+    return openGLWidget->openFile(fileName);
 }
 
 void CanvasWidget::saveAs(std::string fileName) {
     m_fileName = fileName;
     openGLWidget->saveFile(fileName);
+}
+
+void CanvasWidget::exportPNG(const std::string& fileName) {
+    openGLWidget->exportPNG(fileName);
 }
 
 //-Protected EventHandlers-//
@@ -154,7 +159,7 @@ void CanvasWidget::paintEvent(QPaintEvent*) {
 
 void CanvasWidget::mousePressEvent(QMouseEvent* event) {
     switch(currentTool) {
-        case GLWidget::HAND:
+        case BixelGrid::HAND:
             clickPosition.set(event->globalX(), event->globalY());
         break;
     }
@@ -164,7 +169,7 @@ void CanvasWidget::mouseReleaseEvent(QMouseEvent* ) {}
 
 void CanvasWidget::mouseMoveEvent(QMouseEvent* event) {
     switch(currentTool) {
-        case GLWidget::HAND:
+        case BixelGrid::HAND:
             vec2 change = vec2(event->globalX(), event->globalY()) - clickPosition;
             CanvasWidget::openGLWidget->move(openGLWidget->x() + change.x, openGLWidget->y() + change.y);
             clickPosition.set(event->globalX(), event->globalY());

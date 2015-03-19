@@ -1,4 +1,3 @@
-
 #include "bixelwindow.hpp"
 #include <QMenuBar>
 #include <QAction>
@@ -33,7 +32,9 @@ BixelWindow::BixelWindow(QWidget* parent, Qt::WindowFlags flags) : QMainWindow(p
         QObject::connect(open, SIGNAL(triggered()), this, SLOT(open_slot()));
 
         export_image = fileMenu->addAction("Export Image");
+        this->addAction(export_image);
         export_image->setShortcut(QKeySequence("Ctrl+e"));
+        QObject::connect(export_image, SIGNAL(triggered()), this, SLOT(export_image_slot()));
 
         preferences = fileMenu->addAction("Preferences");
         preferences->setShortcut(QKeySequence("Ctrl+p"));
@@ -46,7 +47,7 @@ BixelWindow::BixelWindow(QWidget* parent, Qt::WindowFlags flags) : QMainWindow(p
 
         redo = editMenu->addAction("Redo");
         this->addAction(redo);
-        redo->setShortcut(QKeySequence("Ctrl+r"));
+        redo->setShortcut(QKeySequence("Shift+Ctrl+z"));
         QObject::connect(redo, SIGNAL(triggered()), this, SIGNAL(redo_signal()));
 
         copy = editMenu->addAction("Copy");
@@ -110,16 +111,40 @@ void BixelWindow::open_slot() {
     dialog.setNameFilter("All Bixel files (*.bixl)");
     if(dialog.exec()) {
         m_fileName = dialog.selectedFiles()[0].toStdString();
-        setWindowTitle(m_fileName.c_str());
-        emit open_signal(m_fileName);
-        m_saveUpToDate = true;
+        open_slot(m_fileName);
     }
+}
+
+void BixelWindow::open_slot(std::string fileName) {
+        setWindowTitle(fileName.c_str());
+        emit open_signal(fileName);
+        m_saveUpToDate = true;
+}
+
+void BixelWindow::export_image_slot() {
+    QStringList filters;
+    filters << "All files (*)";
+    filters << "png (*.png)";
+
+    QFileDialog dialog(this);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setDefaultSuffix("png");
+    dialog.setNameFilters(filters);
+
+    QString fileName;
+    if(dialog.exec()) {
+        fileName = dialog.selectedFiles()[0];
+        QFileInfo file(fileName);
+    }
+
+    emit export_image_signal(fileName.toStdString());
 }
 
 void BixelWindow::save_as_slot() {
     QStringList filters;
     filters << "All files (*)";
-    filters << "All Bixel files (*.bixl)";
+    filters << "Bixel (*.bixl)";
 
     QFileDialog dialog(this);
     dialog.setAcceptMode(QFileDialog::AcceptSave);

@@ -15,7 +15,7 @@
 #include <QMouseEvent>
 #include <QColorDialog>
 #include <QColor>
-#include "glwidget.hpp"
+#include "bixelgrid.hpp"
 #include "vec2.hpp"
 
 class CanvasWidget : public QWidget {
@@ -38,8 +38,9 @@ class CanvasWidget : public QWidget {
         void updateSize();
         void undo();
         void redo();
-        void open(std::string fileName);
+        bool open(std::string fileName);
         void saveAs(std::string fileName);
+        void exportPNG(const std::string& fileName);
     signals:
         void colorChanged(const QString& styleSheet);
         void stateChanged();
@@ -52,10 +53,10 @@ class CanvasWidget : public QWidget {
         void mouseMoveEvent(QMouseEvent* event);
 
     private:
-        GLWidget* openGLWidget;
+        BixelGrid* openGLWidget;
         float zoom;
         QColorDialog colorPicker; 
-        GLWidget::DrawTool currentTool;
+        BixelGrid::DrawTool currentTool;
         QColor currentColor;
         vec2 clickPosition;
         QWidget* mainWindow;
